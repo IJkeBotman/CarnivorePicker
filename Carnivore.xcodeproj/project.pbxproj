@@ -19,6 +19,8 @@
 		0AA17D79200CD6ED0001BE7D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17D78200CD6ED0001BE7D /* InterfaceController.swift */; };
 		0AA17D7B200CD6ED0001BE7D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17D7A200CD6ED0001BE7D /* ExtensionDelegate.swift */; };
 		0AA17D7D200CD6ED0001BE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA17D7C200CD6ED0001BE7D /* Assets.xcassets */; };
+		0AA17D8E200CD99C0001BE7D /* MeatTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17D8D200CD99C0001BE7D /* MeatTemperature.swift */; };
+		0AA17D8F200CD9E70001BE7D /* MeatTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17D8D200CD99C0001BE7D /* MeatTemperature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,7 @@
 		0AA17D7A200CD6ED0001BE7D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		0AA17D7C200CD6ED0001BE7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AA17D7E200CD6ED0001BE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AA17D8D200CD99C0001BE7D /* MeatTemperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatTemperature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 				0AA17D54200CD6EC0001BE7D /* Carnivore */,
 				0AA17D68200CD6EC0001BE7D /* Carnivore WatchKit App */,
 				0AA17D77200CD6ED0001BE7D /* Carnivore WatchKit Extension */,
+				0AA17D8C200CD98B0001BE7D /* CarnivoreKit */,
 				0AA17D53200CD6EC0001BE7D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,6 +156,14 @@
 				0AA17D7E200CD6ED0001BE7D /* Info.plist */,
 			);
 			path = "Carnivore WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		0AA17D8C200CD98B0001BE7D /* CarnivoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				0AA17D8D200CD99C0001BE7D /* MeatTemperature.swift */,
+			);
+			path = CarnivoreKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +303,7 @@
 			files = (
 				0AA17D58200CD6EC0001BE7D /* ViewController.swift in Sources */,
 				0AA17D56200CD6EC0001BE7D /* AppDelegate.swift in Sources */,
+				0AA17D8E200CD99C0001BE7D /* MeatTemperature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +313,7 @@
 			files = (
 				0AA17D7B200CD6ED0001BE7D /* ExtensionDelegate.swift in Sources */,
 				0AA17D79200CD6ED0001BE7D /* InterfaceController.swift in Sources */,
+				0AA17D8F200CD9E70001BE7D /* MeatTemperature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
