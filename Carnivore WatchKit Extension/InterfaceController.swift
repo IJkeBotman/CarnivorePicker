@@ -14,6 +14,8 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var timer: WKInterfaceTimer!
     @IBOutlet var timerButton: WKInterfaceButton!
     @IBOutlet var weightPicker: WKInterfacePicker!
+    @IBOutlet var temperatureLabel: WKInterfaceLabel!
+    @IBOutlet var temperaturePicker: WKInterfacePicker!
     
     var ounces = 16
     var cookTemp = MeatTemperature.medium
@@ -30,6 +32,15 @@ class InterfaceController: WKInterfaceController {
         }
         weightPicker.setItems(weightItems)
         weightPicker.setSelectedItemIndex(ounces - 1)
+        
+        var tempItems: [WKPickerItem] = []
+        for item in 1...4 {
+            let temperaturePickerItem = WKPickerItem()
+            temperaturePickerItem.contentImage = WKImage(imageName: "temp-\(item)")
+            tempItems.append(temperaturePickerItem)
+        }
+        temperaturePicker.setItems(tempItems)
+        onTemperatureChanged(0)
     }
     
     override func interfaceOffsetDidScrollToTop() {
@@ -42,6 +53,15 @@ class InterfaceController: WKInterfaceController {
     
     override func interfaceOffsetDidScrollToBottom() {
         print("User scrolled to bottom")
+    }
+    @IBAction func onWeightChanged(_ value: Int) {
+        ounces = value + 1
+    }
+    
+    @IBAction func onTemperatureChanged(_ value: Int) {
+        let temp = MeatTemperature(rawValue: value)!
+        cookTemp = temp
+        temperatureLabel.setText(temp.stringValue)
     }
     
     @IBAction func onTimerButton() {

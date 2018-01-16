@@ -16,7 +16,9 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="nCf-HO-nnP">
                             <items>
-                                <timer alignment="left" id="1td-wr-3Qi"/>
+                                <timer alignment="center" id="1td-wr-3Qi">
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
+                                </timer>
                                 <button width="1" alignment="left" title="Start Timer" id="SF6-G5-2WE">
                                     <connections>
                                         <action selector="onTimerButton" destination="AgC-eL-Hgc" id="LUL-BV-zse"/>
@@ -24,9 +26,22 @@
                                 </button>
                             </items>
                         </group>
-                        <picker height="100" alignment="left" id="7jw-sq-b5r"/>
+                        <label alignment="center" text="Weight (oz)" id="wUv-oE-9bo"/>
+                        <picker height="55" alignment="left" focusStyle="stack" id="7jw-sq-b5r">
+                            <connections>
+                                <action selector="onWeightChanged:" destination="AgC-eL-Hgc" id="UzA-I1-MQm"/>
+                            </connections>
+                        </picker>
+                        <label alignment="center" text="Label" id="JHv-j3-9xx"/>
+                        <picker height="100" alignment="left" style="sequence" focusStyle="stack" id="qZO-7r-g5u">
+                            <connections>
+                                <action selector="onTemperatureChanged:" destination="AgC-eL-Hgc" id="8yF-K8-Cj9"/>
+                            </connections>
+                        </picker>
                     </items>
                     <connections>
+                        <outlet property="temperatureLabel" destination="JHv-j3-9xx" id="YJL-W8-6W2"/>
+                        <outlet property="temperaturePicker" destination="qZO-7r-g5u" id="eog-bd-oJ0"/>
                         <outlet property="timer" destination="1td-wr-3Qi" id="C77-a6-Csy"/>
                         <outlet property="timerButton" destination="SF6-G5-2WE" id="rC9-xH-Tcp"/>
                         <outlet property="weightPicker" destination="7jw-sq-b5r" id="VUd-0P-tEr"/>
